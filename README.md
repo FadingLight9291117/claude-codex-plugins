@@ -6,8 +6,10 @@
 
 | 插件 | 内容 | Claude | Codex |
 |---|---|---|---|
-| `build-ios-apps` | iOS 开发:App Intents、SwiftUI、性能分析、泄漏排查、模拟器调试 | ✅ | — |
-| `hmos` | HarmonyOS 开发:ArkTS/ArkUI、崩溃/内存分析、多设备适配等 23 个技能 | ✅ | ✅ |
+| `hmos` | HarmonyOS 开发:ArkTS/ArkUI 开发、多设备适配等 16 个技能 | ✅ | ✅ |
+| `hmos-perf` | HarmonyOS 性能/故障分析:卡顿、卡死、内存泄漏、崩溃、API 故障等 8 个技能 | ✅ | ✅ |
+
+> build-ios-apps(iOS 开发)已移至独立仓库:github.com/FadingLight9291117/build-ios-apps
 
 > **hmos-native-memleak-analysis**:scripts/ 原生内存分析工具已按官方版本恢复(2026-08-10)。官方来源:`OpenHarmony-SIG/developtools_dfx_skills`(GitCode)
 

@@ -6,14 +6,14 @@
   },
   "plugins": [
     {
-      "name": "build-ios-apps",
-      "description": "Build iOS apps with workflows for App Intents, SwiftUI UI work, performance profiling, leak investigation, and simulator debugging.",
-      "source": "./plugins/build-ios-apps"
+      "name": "hmos",
+      "description": "HarmonyOS 开发技能包:ArkTS/ArkUI 开发、多设备适配等 16 个技能。",
+      "source": "./plugins/hmos"
     },
     {
-      "name": "hmos",
-      "description": "HarmonyOS 开发技能包:ArkTS/ArkUI 开发、崩溃分析、多设备适配等 23 个技能。",
-      "source": "./plugins/hmos"
+      "name": "hmos-perf",
+      "description": "HarmonyOS 性能/故障分析:卡顿、卡死、内存泄漏、崩溃、API 故障等 8 个技能。",
+      "source": "./plugins/hmos-perf"
     }
   ]
 }

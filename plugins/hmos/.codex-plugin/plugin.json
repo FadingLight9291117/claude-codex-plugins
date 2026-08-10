@@ -1,7 +1,7 @@
 {
   "name": "hmos",
   "version": "1.0.0",
-  "description": "HarmonyOS 开发技能包:ArkTS 编译/语法/运行时修复、ArkUI 开发与 MVVM 模式、崩溃/卡死/内存泄漏分析、多设备适配、Push Kit 等 23 个技能。",
+  "description": "HarmonyOS 开发技能包:ArkTS 编译/语法/运行时修复、ArkUI 开发与 MVVM 模式、多设备适配、Push Kit 等 16 个技能。",
   "author": {
     "name": "local"
   },
