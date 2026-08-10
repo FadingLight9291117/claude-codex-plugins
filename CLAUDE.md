@@ -9,6 +9,20 @@
   - 更新技能内容时以官方仓库为准,注意官方技能名无 `hmos-` 前缀(如 `nativeleak-analysis`),本地统一加了 `hmos-` 前缀。
 - **build-ios-apps** 来自 OpenAI plugins 仓库(github.com/openai/plugins),Claude 格式版,本地打包。
 
+## 官方更新同步流程(必做)
+
+官方仓库更新后,按以下步骤同步 hmos 技能:
+
+1. `git clone --depth 1 https://gitcode.com/openharmony-sig/developtools_dfx_skills.git /tmp/dfx_skills_check`(或拉取现有克隆)
+2. 对照官方目录(`01-fault-analysis/` 等)与 `plugins/hmos/skills/`,找出更新/新增/删除的技能
+3. 同步到 4 处副本,保持完全一致:
+   - `~/claude-codex-plugins/plugins/hmos/skills/`(本仓库,commit + push)
+   - `~/.claude/marketplaces/hmos/plugins/hmos/skills/`
+   - `~/.codex/marketplaces/hmos/plugins/hmos/skills/`
+   - `~/.claude/plugins/cache/hmos/hmos/1.0.0/skills/`(重装插件 `claude plugin install hmos` 刷新)
+4. 同步后校验:`shasum -a 256` 对比关键文件,或直接 diff 目录
+5. 官方文件若为 Git LFS 指针(100 字节文本),需在有 git-lfs 的环境 clone 才能拿到真实内容
+
 ## 目录结构与格式
 
 - `.claude-plugin/marketplace.json` — Claude 市场清单
