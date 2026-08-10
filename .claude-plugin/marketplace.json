@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin-marketplace.schema.json",
+  "name": "claude-codex-plugins",
+  "owner": {
+    "name": "FadingLight9291117"
+  },
+  "plugins": [
+    {
+      "name": "build-ios-apps",
+      "description": "Build iOS apps with workflows for App Intents, SwiftUI UI work, performance profiling, leak investigation, and simulator debugging.",
+      "source": "./plugins/build-ios-apps"
+    },
+    {
+      "name": "hmos",
+      "description": "HarmonyOS 开发技能包:ArkTS/ArkUI 开发、崩溃分析、多设备适配等 23 个技能。",
+      "source": "./plugins/hmos"
+    }
+  ]
+}
