@@ -9,7 +9,15 @@
 | `build-ios-apps` | iOS 开发:App Intents、SwiftUI、性能分析、泄漏排查、模拟器调试 | ✅ | — |
 | `hmos` | HarmonyOS 开发:ArkTS/ArkUI、崩溃/内存分析、多设备适配等 23 个技能 | ✅ | ✅ |
 
-> ⚠️ **hmos-native-memleak-analysis 技能说明**:该技能的 `scripts/` 目录(原生内存分析 Python 工具)在原分发版本中为 LFS 指针存根,真实内容不可恢复,已从本仓库移除。SKILL.md 与参考资料完整,但脚本部分暂不可用,待从原始来源恢复。
+> **hmos-native-memleak-analysis**:scripts/ 原生内存分析工具已按官方版本恢复(2026-08-10)。官方来源:`OpenHarmony-SIG/developtools_dfx_skills`(GitCode)
+
+## 技能来源
+
+本仓库的 hmos 系列技能(崩溃/冻屏/泄漏分析等)源自华为可靠性技术实验室发布的 **HarmonyOS DFX Skills**,官方仓库:
+
+- GitCode: https://gitcode.com/openharmony-sig/developtools_dfx_skills
+
+升级技能内容时建议对照官方仓库。
 
 ## 安装
 
