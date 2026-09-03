@@ -1,6 +1,6 @@
 # Claude Codex Plugins
 
-个人插件市场仓库,同时服务 **Claude Code** 和 **Codex** 两个生态。所有插件均为双格式(`.claude-plugin/` + `.codex-plugin/`),技能内容完全一致,改动需两端市场同步。
+**专门收录移动开发相关插件**的插件市场仓库(当前涵盖 HarmonyOS `hmos-*` 与 Android `android-*`),同时服务 **Claude Code** 和 **Codex** 两个生态。所有插件均为双格式(`.claude-plugin/` + `.codex-plugin/`),技能内容完全一致,改动需两端市场同步。非移动类插件不在本仓库收录(如 iOS 的 build-ios-apps 已移至独立仓库)。
 
 ## 包含的插件
 
