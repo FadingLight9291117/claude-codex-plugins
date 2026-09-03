@@ -41,7 +41,7 @@
 
 ## 大型二进制
 
-- `hmos-perf/skills/hmos-jsleak-analysis/scripts/*/heap_cluster*` 为 Git LFS 托管(~423MB),推送前需 `git lfs install`。`scripts/node/heap_cluster.js`(17K,1.2.0 新增)暂以普通文件提交。
+- `hmos-perf/skills/hmos-jsleak-analysis/scripts/*/heap_cluster*` 为 Git LFS 托管(~423MB),推送前需 `git lfs install`。注意:该 glob(`scripts/*/heap_cluster*`)会**误匹配** `scripts/node/heap_cluster.js`(17K,1.2.0 新增,本意普通文件提交),且本机 `git-lfs clean` 过滤器已启用——因此一旦 `git add` 该文件,会被静默转成 100 字节 LFS 指针。需保留普通文件的话,应在 `.gitattributes` 为该路径加 `!filter`/`!diff` 覆盖(如 `scripts/node/heap_cluster.js !filter !diff !merge -text`),提交前用 `git lfs ls-files` 确认它未入 LFS。
 - `hmos-perf/skills/hmos-jank-analysis/scripts/analysis.exe`(132MB)为 Git LFS 托管。
 - `hmos-perf/skills/hmos-native-memleak-analysis/scripts/trace_streamer*` 为普通大文件(13~18MB),勿改成 LFS。
 - `hmos-perf/skills/hmos-cppcrash-analysis/scripts/{linux,windows,macos}/` 二进制为普通大文件提交(官方为 LFS,本仓库未启用 lfs)。
