@@ -10,7 +10,7 @@
 | `hmos-arkui` | HarmonyOS ArkUI 界面:ArkUI 开发、知识检索、MVVM 架构模式 | 3 |
 | `hmos-multidevice` | HarmonyOS 多设备适配:折叠屏、屏幕窗口、避让区、硬件访问、交互方式、自然方向、场景入口 | 7 |
 | `hmos-kits` | HarmonyOS Kit 集成:Push Kit 推送服务集成 | 1 |
-| `hmos-perf` | HarmonyOS 性能/故障分析:卡顿、卡死、JS/ArkTS/native 内存泄漏、fd 泄漏、C++/JS 崩溃、API 故障 | 9 |
+| `hmos-perf` | HarmonyOS 性能/故障分析:卡顿、卡死、性能分析、JS/ArkTS/native 内存泄漏、fd 泄漏、C++/JS 崩溃、API 故障 | 10 |
 | `android-ui` | Android Compose UI:自适应布局、全面屏、Styles、Navigation 3、Compose 迁移、TV/Camera/XR/Wear | 9 |
 | `android-tooling` | Android 构建与工具链:CLI 使用、AGP 9 升级、测试策略、R8 混淆分析 | 4 |
 | `android-profiler` | Android 性能分析:系统 trace、堆转储、方法采样、卡顿/内存泄漏/启动定位、SQL 调试 | 1 |

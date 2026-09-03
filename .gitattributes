@@ -1,2 +1,2 @@
-plugins/hmos-perf/skills/hmos-jsleak-analysis/scripts/*/heap_cluster* filter=lfs diff=lfs merge=lfs -text
+# jsleak heap_cluster* 二进制已于官方 v1.3.0 移除(2026-09-03),原 LFS glob 一并删除
 plugins/hmos-perf/skills/hmos-jank-analysis/scripts/analysis.exe filter=lfs diff=lfs merge=lfs -text

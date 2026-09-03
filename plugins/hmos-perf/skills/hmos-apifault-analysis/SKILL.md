@@ -1,9 +1,9 @@
 ---
-name: hmos-apifault-analysis
+name: apifault-analysis
 description: "DFX Skills，定位开发者问题。当用户输入错误码、错误信息、错误日志、执行失败或需要定位问题时使用。"
 metadata:
    author: Huawei Reliability Technology Lab
-   version: 1.2.0
+   version: 1.3.0
 ---
 # 问题定位 Skill
 

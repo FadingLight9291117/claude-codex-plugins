@@ -27,7 +27,7 @@
     },
     {
       "name": "hmos-perf",
-      "description": "HarmonyOS 性能/故障分析:卡顿、卡死、内存泄漏、fd 泄漏、崩溃、API 故障等 9 个技能。",
+      "description": "HarmonyOS 性能/故障分析:卡顿、卡死、性能分析、内存泄漏、fd 泄漏、崩溃、API 故障等 10 个技能。",
       "source": "./plugins/hmos-perf"
     },
     {

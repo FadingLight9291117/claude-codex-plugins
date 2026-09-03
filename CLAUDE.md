@@ -33,7 +33,7 @@
 - `plugins/hmos-arkui/` — 双格式,ArkUI 界面开发技能 3 个
 - `plugins/hmos-multidevice/` — 双格式,多设备适配技能 7 个
 - `plugins/hmos-kits/` — 双格式,Kit 集成技能 1 个(push-kit)
-- `plugins/hmos-perf/` — 双格式,性能/故障分析技能 9 个
+- `plugins/hmos-perf/` — 双格式,性能/故障分析技能 10 个(官方 v1.3.0 含新增 perf-analysis)
 - `plugins/android-ui/` — 双格式,Android Compose UI 技能 9 个
 - `plugins/android-tooling/` — 双格式,Android 构建与工具链技能 4 个
 - `plugins/android-profiler/` — 双格式,Android 性能分析技能 1 个
@@ -41,7 +41,7 @@
 
 ## 大型二进制
 
-- `hmos-perf/skills/hmos-jsleak-analysis/scripts/*/heap_cluster*` 为 Git LFS 托管(~423MB),推送前需 `git lfs install`。注意:该 glob(`scripts/*/heap_cluster*`)会**误匹配** `scripts/node/heap_cluster.js`(17K,1.2.0 新增,本意普通文件提交),且本机 `git-lfs clean` 过滤器已启用——因此一旦 `git add` 该文件,会被静默转成 100 字节 LFS 指针。需保留普通文件的话,应在 `.gitattributes` 为该路径加 `!filter`/`!diff` 覆盖(如 `scripts/node/heap_cluster.js !filter !diff !merge -text`),提交前用 `git lfs ls-files` 确认它未入 LFS。
+- `hmos-perf/skills/hmos-jsleak-analysis/` 官方 v1.3.0 已不再附带编译版 `heap_cluster*` 二进制(原 ~423MB LFS,2026-09-03 同步时已删除),改用 `rawheap_translator`。`scripts/node/heap_cluster.js`(普通文件)曾因 `.gitattributes` 的 `scripts/*/heap_cluster*` LFS glob 被误匹配、且本机 `git-lfs clean` 生效而无法正常提交;现已在 `.gitattributes` 显式加 `scripts/node/heap_cluster.js !filter !diff !merge -text` 排除,提交前仍可用 `git lfs ls-files` 确认其未入 LFS。若后续重新引入 heap_cluster 二进制,推送前需 `git lfs install`。
 - `hmos-perf/skills/hmos-jank-analysis/scripts/analysis.exe`(132MB)为 Git LFS 托管。
 - `hmos-perf/skills/hmos-native-memleak-analysis/scripts/trace_streamer*` 为普通大文件(13~18MB),勿改成 LFS。
 - `hmos-perf/skills/hmos-cppcrash-analysis/scripts/{linux,windows,macos}/` 二进制为普通大文件提交(官方为 LFS,本仓库未启用 lfs)。

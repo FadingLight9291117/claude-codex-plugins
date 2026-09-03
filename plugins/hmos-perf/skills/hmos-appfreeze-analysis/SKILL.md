@@ -1,5 +1,5 @@
 ---
-name: hmos-appfreeze-analysis
+name: appfreeze-analysis
 description: >
   DFX Skills，自动分析 HarmonyOS / OpenHarmony Freeze（冻屏/卡死）故障日志，定位根因并输出完整证据链。
   当用户提供完整的faultlog 文件和采样栈文件、询问应用无响应/卡死/ANR 问题的根因，
@@ -10,7 +10,7 @@ description: >
   Binder 通信链路、EventHandler 队列，最终输出唯一根因模块与修复建议。
 metadata:
    author: Huawei Reliability Technology Lab
-   version: 1.2.0
+   version: 1.3.0
 ---
 
 # Appfreeze Analysis Skill

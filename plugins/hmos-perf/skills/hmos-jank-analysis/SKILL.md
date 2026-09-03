@@ -1,12 +1,12 @@
 ---
-name: hmos-jank-analysis
+name: trace-analyzer
 description: >
   分析 HarmonyOS trace 文件，检测卡顿帧、根因分析、CPU 状态统计，生成 CSV/JSON/HTML 报告。
   当用户提到"分析 trace"、"analyze trace"、"卡顿分析"、"jank 分析"、"帧率分析"、
   "完成时延"、"completion latency"、"trace-analyzer"时使用。
 metadata:
    author: Huawei Reliability Technology Lab
-   version: 1.2.0
+   version: 1.3.0
 ---
 
 # 性能卡顿问题分析工具
