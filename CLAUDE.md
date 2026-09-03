@@ -16,7 +16,7 @@
 官方仓库更新后,按以下步骤同步 hmos 技能:
 
 1. `git clone --depth 1 https://gitcode.com/openharmony-sig/developtools_dfx_skills.git /tmp/dfx_skills_check`(或拉取现有克隆)
-2. 对照官方目录(`01-fault-analysis/` 等)与 `plugins/hmos/skills/`,找出更新/新增/删除的技能
+2. 对照官方目录(`01-fault-analysis/` 等)与 `plugins/hmos-perf/skills/`,找出更新/新增/删除的技能
 3. 同步到各副本,保持完全一致:
    - `~/claude-codex-plugins/plugins/hmos*/skills/`(本仓库,commit + push)
    - `~/.claude/marketplaces/hmos/plugins/hmos/skills/` 与 `~/.claude/marketplaces/hmos-perf/plugins/hmos-perf/skills/`
@@ -29,7 +29,10 @@
 
 - `.claude-plugin/marketplace.json` — Claude 市场清单
 - `.agents/plugins/marketplace.json` — Codex 市场清单
-- `plugins/hmos/` — 双格式(`.claude-plugin/` + `.codex-plugin/`),普通开发技能 16 个
+- `plugins/hmos-arkts/` — 双格式(`.claude-plugin/` + `.codex-plugin/`),ArkTS 语言技能 5 个
+- `plugins/hmos-arkui/` — 双格式,ArkUI 界面开发技能 3 个
+- `plugins/hmos-multidevice/` — 双格式,多设备适配技能 7 个
+- `plugins/hmos-kits/` — 双格式,Kit 集成技能 1 个(push-kit)
 - `plugins/hmos-perf/` — 双格式,性能/故障分析技能 9 个
 - `plugins/android-ui/` — 双格式,Android Compose UI 技能 9 个
 - `plugins/android-tooling/` — 双格式,Android 构建与工具链技能 4 个

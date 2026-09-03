@@ -6,9 +6,24 @@
   },
   "plugins": [
     {
-      "name": "hmos",
-      "description": "HarmonyOS 开发技能包:ArkTS/ArkUI 开发、多设备适配等 16 个技能。",
-      "source": "./plugins/hmos"
+      "name": "hmos-arkts",
+      "description": "HarmonyOS ArkTS 语言技能包:编译错误修复、语法规范、运行时修复、知识检索、语法检查等 5 个技能。",
+      "source": "./plugins/hmos-arkts"
+    },
+    {
+      "name": "hmos-arkui",
+      "description": "HarmonyOS ArkUI 界面开发技能包:ArkUI 开发、知识检索、MVVM 架构模式等 3 个技能。",
+      "source": "./plugins/hmos-arkui"
+    },
+    {
+      "name": "hmos-multidevice",
+      "description": "HarmonyOS 多设备适配技能包:折叠屏、屏幕窗口、避让区、硬件访问、交互方式、自然方向、场景入口等 7 个技能。",
+      "source": "./plugins/hmos-multidevice"
+    },
+    {
+      "name": "hmos-kits",
+      "description": "HarmonyOS Kit 集成技能包:Push Kit 推送服务集成等 1 个技能。",
+      "source": "./plugins/hmos-kits"
     },
     {
       "name": "hmos-perf",

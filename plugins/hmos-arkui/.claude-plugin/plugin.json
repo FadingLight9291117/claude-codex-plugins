@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
-  "name": "hmos",
+  "name": "hmos-arkui",
   "version": "1.0.0",
-  "description": "HarmonyOS 开发技能包:ArkTS 编译/语法/运行时修复、ArkUI 开发与 MVVM 模式、多设备适配、Push Kit 等 16 个技能。",
+  "description": "HarmonyOS ArkUI 界面开发技能包:ArkUI 开发、界面知识检索、MVVM 架构模式等 3 个技能。",
   "author": {
     "name": "local"
   },
