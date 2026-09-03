@@ -37,6 +37,7 @@
 - `plugins/android-ui/` — 双格式,Android Compose UI 技能 9 个
 - `plugins/android-tooling/` — 双格式,Android 构建与工具链技能 4 个
 - `plugins/android-profiler/` — 双格式,Android 性能分析技能 1 个
+- `plugins/hmos-testing/` — 双格式,HarmonyOS 测试技能 2 个(instrument-test / local-test)
 - 技能内容改动需同步两端市场目录:`~/.claude/marketplaces/hmos/`、`~/.claude/marketplaces/hmos-perf/`、`~/.codex/marketplaces/hmos/`、`~/.codex/marketplaces/hmos-perf/`
 
 ## 大型二进制

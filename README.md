@@ -14,6 +14,7 @@
 | `android-ui` | Android Compose UI:自适应布局、全面屏、Styles、Navigation 3、Compose 迁移、TV/Camera/XR/Wear | 9 |
 | `android-tooling` | Android 构建与工具链:CLI 使用、AGP 9 升级、测试策略、R8 混淆分析 | 4 |
 | `android-profiler` | Android 性能分析:系统 trace、堆转储、方法采样、卡顿/内存泄漏/启动定位、SQL 调试 | 1 |
+| `hmos-testing` | HarmonyOS 测试:Instrument Test、Local Test 运行与覆盖率统计 | 2 |
 
 > hmos 系列技能包 `hmos`(开发)与 `hmos-perf`(分析)原为单体插件,现已按主题拆分为上表的 `hmos-*` 插件;`build-ios-apps`(iOS 开发)已移至独立仓库:github.com/FadingLight9291117/build-ios-apps。
 
@@ -30,7 +31,7 @@
 
 ```bash
 claude plugin marketplace add FadingLight9291117/claude-codex-plugins
-claude plugin install hmos-arkts        # 及 hmos-arkui / hmos-multidevice / hmos-kits / hmos-perf
+claude plugin install hmos-arkts        # 及 hmos-arkui / hmos-multidevice / hmos-kits / hmos-perf / hmos-testing
 claude plugin install android-ui         # 及 android-tooling / android-profiler
 ```
 
@@ -55,7 +56,8 @@ codex plugin add android-ui
     ├── hmos-perf/
     ├── android-ui/
     ├── android-tooling/
-    └── android-profiler/
+    ├── android-profiler/
+    └── hmos-testing/
 ```
 
 ## 维护
