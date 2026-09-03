@@ -1,0 +1,33 @@
+{
+  "name": "android-tooling",
+  "version": "1.0.0",
+  "description": "Android 构建与工具链技能包:CLI 使用、AGP 9 升级、测试策略、R8 混淆分析等 4 个技能。",
+  "author": {
+    "name": "local"
+  },
+  "license": "MIT",
+  "keywords": [
+    "android",
+    "gradle",
+    "agp",
+    "testing",
+    "r8"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Android Build & Tooling Skills",
+    "shortDescription": "CLI 使用、AGP 9 升级、测试策略、R8 混淆分析等 4 个技能",
+    "longDescription": "Android 构建与工具链技能包:android CLI 安装使用、Android Gradle Plugin 9 升级迁移、测试策略搭建(单元/UI/截图/E2E)、R8 混淆规则分析与包体优化。",
+    "developerName": "local",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "构建、测试并优化 Android 应用"
+    ],
+    "brandColor": "#3DDC84",
+    "screenshots": []
+  }
+}

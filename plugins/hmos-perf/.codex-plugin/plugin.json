@@ -1,7 +1,7 @@
 {
   "name": "hmos-perf",
   "version": "1.0.0",
-  "description": "HarmonyOS 性能/故障分析技能包:卡顿(jank)、卡死(appfreeze)、JS/ArkTS/native 内存泄漏、C++/JS 崩溃、API 故障分析等 8 个技能。",
+  "description": "HarmonyOS 性能/故障分析技能包:卡顿(jank)、卡死(appfreeze)、JS/ArkTS/native 内存泄漏、fd 泄漏、C++/JS 崩溃、API 故障分析等 9 个技能。",
   "author": {
     "name": "local"
   },
@@ -17,8 +17,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "HarmonyOS Performance Analysis",
-    "shortDescription": "卡顿、卡死、内存泄漏、崩溃、API 故障分析等 8 个技能",
-    "longDescription": "HarmonyOS 性能与故障分析技能包:卡顿/帧率分析(jank)、应用卡死(appfreeze)、JS 泄漏(jsleak)、ArkTS 内存泄漏(memleak)、native 内存泄漏(native-memleak)、C++ 崩溃(cppcrash)、JS 崩溃(jscrash)、API 故障(apifault)。",
+    "shortDescription": "卡顿、卡死、内存泄漏、fd 泄漏、崩溃、API 故障分析等 9 个技能",
+    "longDescription": "HarmonyOS 性能与故障分析技能包:卡顿/帧率分析(jank)、应用卡死(appfreeze)、JS 泄漏(jsleak)、ArkTS 内存泄漏(memleak)、native 内存泄漏(native-memleak)、fd 泄漏(fdleak)、C++ 崩溃(cppcrash)、JS 崩溃(jscrash)、API 故障(apifault)。",
     "developerName": "local",
     "category": "Developer Tools",
     "capabilities": [

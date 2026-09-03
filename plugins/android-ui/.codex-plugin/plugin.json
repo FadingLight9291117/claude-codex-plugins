@@ -1,0 +1,35 @@
+{
+  "name": "android-ui",
+  "version": "1.0.0",
+  "description": "Android Compose UI 开发技能包:自适应布局、全面屏、Styles、Navigation 3、XML→Compose 迁移、TV/Camera/XR/Wear 等 9 个技能。",
+  "author": {
+    "name": "local"
+  },
+  "license": "MIT",
+  "keywords": [
+    "android",
+    "compose",
+    "ui",
+    "adaptive",
+    "navigation",
+    "wear",
+    "camera"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Android Compose UI Skills",
+    "shortDescription": "自适应布局、全面屏、Navigation 3、Compose 迁移、TV/Camera/XR/Wear 等 9 个技能",
+    "longDescription": "Android Compose UI 开发技能包:自适应布局(手机/平板/折叠屏/TV/XR)、全面屏与系统栏适配、Compose Styles API、Jetpack Navigation 3、XML View→Compose 迁移、TV Leanback→Compose 迁移、CameraX 相机开发、XR 眼镜 Glimmer 开发、Wear OS Compose Material 3。",
+    "developerName": "local",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "使用 Jetpack Compose 开发 Android 应用 UI"
+    ],
+    "brandColor": "#3DDC84",
+    "screenshots": []
+  }
+}

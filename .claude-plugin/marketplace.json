@@ -12,8 +12,23 @@
     },
     {
       "name": "hmos-perf",
-      "description": "HarmonyOS 性能/故障分析:卡顿、卡死、内存泄漏、崩溃、API 故障等 8 个技能。",
+      "description": "HarmonyOS 性能/故障分析:卡顿、卡死、内存泄漏、fd 泄漏、崩溃、API 故障等 9 个技能。",
       "source": "./plugins/hmos-perf"
+    },
+    {
+      "name": "android-ui",
+      "description": "Android Compose UI 开发技能包:自适应布局、全面屏、Styles、Navigation 3、Compose 迁移、TV/Camera/XR/Wear 等 9 个技能。",
+      "source": "./plugins/android-ui"
+    },
+    {
+      "name": "android-tooling",
+      "description": "Android 构建与工具链技能包:CLI 使用、AGP 9 升级、测试策略、R8 混淆分析等 4 个技能。",
+      "source": "./plugins/android-tooling"
+    },
+    {
+      "name": "android-profiler",
+      "description": "Android 性能分析技能包:系统 trace、堆转储、方法采样、卡顿/内存泄漏/启动问题定位、SQL 调试等。",
+      "source": "./plugins/android-profiler"
     }
   ]
 }

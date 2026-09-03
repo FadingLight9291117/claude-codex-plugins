@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "android-profiler",
+  "version": "1.0.0",
+  "description": "Android 性能分析技能包:系统 trace、堆转储、方法采样、卡顿/内存泄漏/启动问题定位、SQL 调试等。",
+  "author": {
+    "name": "local"
+  },
+  "license": "MIT",
+  "skills": [
+    "./skills/"
+  ]
+}

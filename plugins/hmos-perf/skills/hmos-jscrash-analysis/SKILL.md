@@ -7,11 +7,13 @@ description: >
   BusinessError/OutOfMemoryError/URIError/TerminationError/AggregateError、Error message、
   Stacktrace、HybridStack、faultlogger、Cannot get SourceMap info 等字段的日志，
   或询问 HarmonyOS 应用启动/点击后闪退、ArkTS 崩溃、JS Crash 怎么定位、OOM 闪退原因时，
-  必须使用此技能。即使用户只说“帮分析这个 JS Crash 日志”“应用闪退了是什么原因”
-  “ArkTS 报错导致崩溃怎么修”，也应立即触发此技能。
+  必须使用此技能。确认崩溃原因为 OOM 且用户同时提供 rawheap 或 heapsnapshot 快照时，
+  必须继续调用 jsleak-analysis Skill 分析快照。即使用户只说“帮分析这个 JS Crash 日志”
+  “应用闪退了是什么原因”“ArkTS 报错导致崩溃怎么修”，也应立即触发此技能；如果日志是 cppcrash、
+  freeze，或者用户询问的是原生/C++ 层崩溃，且没有 JS/ArkTS 错误字段，则不该调用此技能。
 metadata:
    author: Huawei Reliability Technology Lab
-   version: 1.1.0
+   version: 1.2.0
 ---
 
 # JS Crash Analysis
@@ -47,6 +49,14 @@ metadata:
    - 说明触发路径：哪个接口/组件/变量/参数/资源/文件/URL/递归/内存分配触发了异常。
    - 区分“应用未捕获异常导致进程崩溃”和“框架主动抛出明确错误”。大多数 JS Crash 的修复都在应用侧。
    - 对 `OutOfMemoryError`，判断堆栈是否稳定：稳定堆栈偏向高频调用或泄漏路径；不稳定堆栈需通过 Snapshot 对比泄漏对象。已上架应用市场的应用通常不能使用 Snapshot 分析模板。
+
+6. OOM 快照联动分析
+   - 仅当日志已由 `Reason`、`Error name` 或 `Error message` 明确定性为 `OutOfMemoryError` / OOM，且用户同时提供 `.rawheap` 或 `.heapsnapshot` 文件时，必须调用 `jsleak-analysis` Skill 继续分析，不要只建议用户自行分析快照。
+   - 先完成 JS Crash 日志定性，再按 `jsleak-analysis/SKILL.md` 的流程处理快照。输入为 `.rawheap` 时先执行 rawheap 转换；输入为单快照、多快照或不同版本快照时，分别选择 JS Leak Skill 对应的分析模式。
+   - JS Crash 日志与快照应属于同一进程、同一问题场景或用户明确指定的对照场景。若 PID、时间或应用信息无法对应，仍可分析快照，但必须说明关联关系未经确认，不能直接把快照中的疑似泄漏对象认定为本次 OOM 的根因。
+   - 联动结果必须同时保留 Crash 证据与快照证据：Crash 部分说明 OOM 的直接触发信息，JS Leak 部分给出最严重的疑似泄漏对象、Retained Size、强引用链和一级/二级/三级根因。
+   - 只有快照证据能解释 OOM 的内存增长时，才能将对应对象定为根因；证据不足时写明“疑似泄漏对象”，不要把相关性表述成因果关系。
+   - OOM 但未提供快照时，只完成 JS Crash 分析并说明需要补充的快照类型；提供快照但 Crash 并非 OOM 时，不自动调用 JS Leak Skill，除非用户明确要求分析快照。
 
 ## 输出格式要求
 
@@ -101,6 +111,13 @@ metadata:
 4. HybridStack / Native 桥接证据（如有）：<NAPI、libfs、libark_jsruntime 等关键帧及其意义>
 5. 源码行号（如有）：<文件:行:列>
 
+### OOM 快照分析（仅在触发 jsleak-analysis Skill 时输出）
+- 快照输入：<rawheap / heapsnapshot 文件及其与 Crash 的时间、PID、进程关联>
+- 最严重疑似泄漏对象：<对象名称、Retained Size、数量>
+- 强引用链：<对象到 GC Root 的最短强引用链>
+- JS Leak 三级根因：<一级根因 -> 二级根因 -> 三级根因>
+- 与本次 OOM 的关系：<已确认根因 / 高度疑似 / 关联证据不足，并说明依据>
+
 ### 修复建议
 1. <围绕三级根因给出应用侧或 SDK 侧直接修复建议>
 2. <补充输入校验、try-catch、生命周期/状态检查、资源路径检查、URL/JSON/SQL 校验、内存释放等>
@@ -111,3 +128,4 @@ metadata:
 
 - `references/jscrash-patterns.md`: JS Crash 错误模式、分析结论和修复建议矩阵。
 - `references/fault-mode-library.md`: JSError 一级/二级/三级根因库，用于在报告中输出故障模式匹配结果。
+- `../jsleak-analysis/SKILL.md`: OOM 且提供 rawheap / heapsnapshot 时继续执行的 JS 内存泄漏分析流程。

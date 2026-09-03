@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "android-tooling",
+  "version": "1.0.0",
+  "description": "Android 构建与工具链技能包:CLI 使用、AGP 9 升级、测试策略、R8 混淆分析等 4 个技能。",
+  "author": {
+    "name": "local"
+  },
+  "license": "MIT",
+  "skills": [
+    "./skills/"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "android-ui",
+  "version": "1.0.0",
+  "description": "Android Compose UI 开发技能包:自适应布局、全面屏、Styles、Navigation 3、XML→Compose 迁移、TV/Camera/XR/Wear 等 9 个技能。",
+  "author": {
+    "name": "local"
+  },
+  "license": "MIT",
+  "skills": [
+    "./skills/"
+  ]
+}

@@ -39,9 +39,9 @@ if __name__ == '__main__':
                 pid = match.group('pid')
                 pid_process[pid] = match.group('process_name')
                 if pid in native_dict:
-                    native_dict[pid] = {key: file_path}
-                else:
                     native_dict[pid][key] = file_path
+                else:
+                    native_dict[pid] = {key: file_path}
                 break
             kernel_match = kernel_res.search(file_name)
             if kernel_match:

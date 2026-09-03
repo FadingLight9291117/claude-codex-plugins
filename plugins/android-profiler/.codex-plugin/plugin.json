@@ -1,0 +1,34 @@
+{
+  "name": "android-profiler",
+  "version": "1.0.0",
+  "description": "Android 性能分析技能包:系统 trace、堆转储、方法采样、卡顿/内存泄漏/启动问题定位、SQL 调试等。",
+  "author": {
+    "name": "local"
+  },
+  "license": "MIT",
+  "keywords": [
+    "android",
+    "profiling",
+    "trace",
+    "heap",
+    "jank",
+    "sql"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Android Profiling Skills",
+    "shortDescription": "系统 trace、堆转储、方法采样、卡顿/内存泄漏/启动问题定位、SQL 调试",
+    "longDescription": "Android 性能分析与调试技能包:录制与分析性能数据(system trace、堆转储、方法采样、调用栈采样、内存分配),定位卡顿(jank)、内存泄漏、应用启动瓶颈,以及执行 ad-hoc SQL 查询调试。适用于用户应用与系统应用。",
+    "developerName": "local",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "录制并分析 Android 应用性能数据"
+    ],
+    "brandColor": "#3DDC84",
+    "screenshots": []
+  }
+}

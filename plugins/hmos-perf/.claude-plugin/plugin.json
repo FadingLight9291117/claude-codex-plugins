@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "hmos-perf",
   "version": "1.0.0",
-  "description": "HarmonyOS 性能/故障分析技能包:卡顿(jank)、卡死(appfreeze)、JS/ArkTS/native 内存泄漏、C++/JS 崩溃、API 故障分析等 8 个技能。",
+  "description": "HarmonyOS 性能/故障分析技能包:卡顿(jank)、卡死(appfreeze)、JS/ArkTS/native 内存泄漏、fd 泄漏、C++/JS 崩溃、API 故障分析等 9 个技能。",
   "author": {
     "name": "local"
   },

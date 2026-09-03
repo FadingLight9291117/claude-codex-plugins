@@ -6,7 +6,7 @@ description: >
   "完成时延"、"completion latency"、"trace-analyzer"时使用。
 metadata:
    author: Huawei Reliability Technology Lab
-   version: 1.0.0
+   version: 1.2.0
 ---
 
 # 性能卡顿问题分析工具

@@ -27,6 +27,42 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Developer Tools"
+    },
+    {
+      "name": "android-ui",
+      "source": {
+        "source": "local",
+        "path": "./plugins/android-ui"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "android-tooling",
+      "source": {
+        "source": "local",
+        "path": "./plugins/android-tooling"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "android-profiler",
+      "source": {
+        "source": "local",
+        "path": "./plugins/android-profiler"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
     }
   ]
 }
